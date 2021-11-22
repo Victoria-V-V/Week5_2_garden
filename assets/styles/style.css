@@ -4,6 +4,10 @@ body {
     font-size: 16px;
     font-weight: normal;
     color: #678570;
+
+    background-image: url(/assets/images/flower_header.svg);
+    background-repeat: no-repeat;
+    background-position: top 0% left 2.06%;
 }
 
 /* Header styles start */
@@ -25,6 +29,7 @@ body {
 
 .menu_list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -78,12 +83,6 @@ body {
     height: 681.23px;
 }
 
-.image_container_2 {
-    position: absolute;
-    top: 0%;
-    left: 2.06%;
-    z-index: -1;
-}
 
 .image_main_center_green {
     position: absolute;
@@ -99,26 +98,24 @@ body {
 /* Home styles start */
 
 .home {
-    display: block;
-    min-height: 100vh;
+    height: 100vh;
+
+    background-image: url(/assets/images/girl.svg);
+    background-repeat: no-repeat;
+    background-position: top 83.72px right 0%;
+    background-size: 650px;
 }
 
-.home_pic {
-    width: 698.27px;
-    height: 765.48px;
-    margin-top: 83.72px;
-    margin-left: 864.1px;
+.home__text {
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    padding-top: 188px;
+    padding-left: 13.43%;
 }
 
 .home_title {
-    position: absolute;
-    top: 268.27px;
-    left: 215px;
-    display: inline-block;
-    width: 600px;
-    height: 216.68px;
-    margin: 0%;
-
+    margin: 0;
     font-family: 'Fredoka One', cursive;
     font-style: normal;
     font-size: 72px;
@@ -132,12 +129,6 @@ body {
 }
 
 p.home_subtitle {
-    position: absolute;
-    top: 504px;
-    left: 215px;
-    width: 574px;
-    height: 59px;
-
     font-family: Arial;
     font-style: normal;
     font-size: 18px;
@@ -146,42 +137,40 @@ p.home_subtitle {
     color: #707070;
 }
 
+.home-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+}
+
 .ellipse_link {
     color: #374A3D;
+    width: 179.78px;
 }
 
 .ellipse_box {
-    position: absolute;
-    display: inline-block;
-    top: 623px;
-    left: 215px;
-    width: 179.78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 67.11px;
-
     font-size: 18px;
-    line-height: 35px;
     border: 2px solid #0CA941;
     border-radius: 100%;
 }
 
 .text_arrow_flex {
-    position: absolute;
-    left: 20%;
     display: flex;
     flex-basis: auto;
     max-width: 180px;
 }
 
 .arrow_link_img {
-    width: 17.06px;
-    height: 10.16px;
     margin-left: 3.27px;
 }
 
 .curled_arrow {
-    position: absolute;
-    top: 640.52px;
-    left: 451.61px;
+    padding-top: 20px;
     width: 105.8px;
     height: 79.24px;
 }
@@ -189,20 +178,22 @@ p.home_subtitle {
 .rectangle {
     position: absolute;
     top: 736.61px;
-    left: 635.73px;
+    left: 39.733125%;
     width: 168.87px;
     height: 187.66px;
     background: #FFFFFF;
     border-radius: 35px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: -1;
 }
 
 .cactus {
     position: absolute;
     top: 675.52px;
-    left: 670.61px;
+    left: 42.22%;
     width: 168.87px;
     height: 247.94px;
+    z-index: -1;
 }
 
 /* Home styles end */
@@ -210,44 +201,36 @@ p.home_subtitle {
 /* Next styles start */
 
 .next {
+    position: relative;
+    padding-top: 100px;
     min-height: 60vh;
     background: #ffffff00;
 }
 
 .plant_1 {
     position: absolute;
-    top: 915px;
+    top: -20px;
     left: 100px;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
-.landscape {
-    position: relative;
+.landscape_flex {
     box-sizing: border-box;
-    top: 50.48px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     left: 13.4375vw;
     width: 1170px;
-    height: 234.68px;
+    margin-left: 170px;
     background: #ffffff;
     box-shadow: 23px 19px 138px -45px rgba(12, 169, 65, 0.13);
     border-radius: 28px;
 }
 
-.landscape_flex {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 170px;
-}
-
 .landscape_titles {
     display: flex;
     flex-direction: column;
-    margin-right: 75px;
+    margin-right: 100px;
 }
 
 .landscape_title {
@@ -276,10 +259,10 @@ p.home_subtitle {
 
 .numbers {
     display: flex;
-    width: 583.44px;
     flex-basis: auto;
     justify-content: space-around;
     align-items: center;
+    width: 583.44px;
 }
 
 .numbers_1,
@@ -290,13 +273,12 @@ p.home_subtitle {
 }
 
 .number {
+    margin: 0;
     font-family: Arial;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
     line-height: 42px;
-    margin: 0;
-
     color: #0CA941;
 }
 
